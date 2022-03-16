@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 800px;
+        height: 800px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="box" :style="{'background-color' : color}">
+        <button @click="changeColor">换肤</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      let app = Vue.createApp({
+        data() {
+          return {
+            color: 'black',
+          }
+        },
+        created() {},
+        mounted() {},
+        methods: {
+          changeColor() {
+            this.color = this.color === 'black' ? 'white' : 'black'
+          },
+        },
+      })
+      let vm = app.mount('#app')
+    </script>
+  </body>
+
+  <html></html>
+</html>

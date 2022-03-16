@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <ul>
+        <!-- 错误的做法 -->
+      </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            age: '<strong>13<strong>',
+            link: '<a href="https://www.youtube.com">youtube</a>',
+          }
+        },
+        methods: {
+          customMethod(str) {
+            return str.split('').reverse().join(',')
+          },
+        },
+      })
+      const vm = app.mount('#root')
+    </script>
+  </body>
+</html>
